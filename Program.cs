@@ -13,8 +13,8 @@ namespace TeNDA_Inventory_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WelcomeScreen());
-            //Application.Run(new ManageUsers());
+            //Application.Run(new Login());
+            Application.Run(new ManageStock());
         }
     }
 }

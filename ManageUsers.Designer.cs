@@ -35,6 +35,8 @@ namespace TeNDA_Inventory_Management_System
             this.close = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contacts = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teNDAInventoryDataSet = new TeNDA_Inventory_Management_System.TeNDAInventoryDataSet();
             this.email = new System.Windows.Forms.TextBox();
             this.pass = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
@@ -45,16 +47,16 @@ namespace TeNDA_Inventory_Management_System
             this.add = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Display = new System.Windows.Forms.DataGridView();
-            this.teNDAInventoryDataSet = new TeNDA_Inventory_Management_System.TeNDAInventoryDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new TeNDA_Inventory_Management_System.TeNDAInventoryDataSetTableAdapters.UsersTableAdapter();
             this.tableAdapterManager = new TeNDA_Inventory_Management_System.TeNDAInventoryDataSetTableAdapters.TableAdapterManager();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Display)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teNDAInventoryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teNDAInventoryDataSet)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Display)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +86,11 @@ namespace TeNDA_Inventory_Management_System
             // close
             // 
             this.close.AutoSize = true;
-            this.close.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close.ForeColor = System.Drawing.Color.White;
-            this.close.Location = new System.Drawing.Point(802, 5);
+            this.close.Location = new System.Drawing.Point(815, 9);
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(39, 38);
+            this.close.Size = new System.Drawing.Size(26, 25);
             this.close.TabIndex = 0;
             this.close.Text = "X";
             this.close.Click += new System.EventHandler(this.close_Click);
@@ -117,6 +119,16 @@ namespace TeNDA_Inventory_Management_System
             this.contacts.TabIndex = 1;
             this.contacts.Text = "Contact";
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.teNDAInventoryDataSet;
+            // 
+            // teNDAInventoryDataSet
+            // 
+            this.teNDAInventoryDataSet.DataSetName = "TeNDAInventoryDataSet";
+            this.teNDAInventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // email
             // 
             this.email.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Email", true));
@@ -135,6 +147,7 @@ namespace TeNDA_Inventory_Management_System
             this.pass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.Location = new System.Drawing.Point(65, 227);
             this.pass.Name = "pass";
+            this.pass.PasswordChar = '*';
             this.pass.Size = new System.Drawing.Size(191, 27);
             this.pass.TabIndex = 1;
             this.pass.Text = "Password";
@@ -218,10 +231,13 @@ namespace TeNDA_Inventory_Management_System
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 478);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(0, 467);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(844, 10);
+            this.panel3.Size = new System.Drawing.Size(844, 21);
             this.panel3.TabIndex = 4;
             // 
             // Display
@@ -231,19 +247,9 @@ namespace TeNDA_Inventory_Management_System
             this.Display.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Display.Location = new System.Drawing.Point(363, 157);
             this.Display.Name = "Display";
-            this.Display.Size = new System.Drawing.Size(451, 315);
+            this.Display.Size = new System.Drawing.Size(451, 304);
             this.Display.TabIndex = 5;
             this.Display.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Display_CellContentClick);
-            // 
-            // teNDAInventoryDataSet
-            // 
-            this.teNDAInventoryDataSet.DataSetName = "TeNDAInventoryDataSet";
-            this.teNDAInventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.teNDAInventoryDataSet;
             // 
             // usersTableAdapter
             // 
@@ -271,6 +277,18 @@ namespace TeNDA_Inventory_Management_System
             this.label3.TabIndex = 6;
             this.label3.Text = "Users List";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(104, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(660, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Design and Development By: Anointed | 0240449678 | MIS UNIT | antwialbert1991@hot" +
+    "mail.com";
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,9 +314,11 @@ namespace TeNDA_Inventory_Management_System
             this.Load += new System.EventHandler(this.ManageUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Display)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teNDAInventoryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teNDAInventoryDataSet)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Display)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -328,5 +348,6 @@ namespace TeNDA_Inventory_Management_System
         private TeNDAInventoryDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

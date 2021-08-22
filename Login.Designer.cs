@@ -1,7 +1,7 @@
 ﻿
 namespace TeNDA_Inventory_Management_System
 {
-    partial class WelcomeScreen
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -163,7 +163,7 @@ namespace TeNDA_Inventory_Management_System
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WelcomeScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WelcomeScreen";
+            this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

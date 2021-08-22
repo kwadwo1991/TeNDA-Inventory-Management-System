@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace TeNDA_Inventory_Management_System
 {
-    public partial class WelcomeScreen : Form
+    public partial class Login : Form
     {
-        public WelcomeScreen()
+        public Login()
         {
             InitializeComponent();
         }
