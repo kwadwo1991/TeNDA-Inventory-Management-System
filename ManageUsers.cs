@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Data;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
+//using System.Text.RegularExpressions;
 
 namespace TeNDA_Inventory_Management_System
 {
@@ -53,9 +52,9 @@ namespace TeNDA_Inventory_Management_System
                 Con.Close();
             }
 
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK);
+                
             } **/
 
         }
@@ -103,9 +102,9 @@ namespace TeNDA_Inventory_Management_System
                         fname.Text = "";
                     }
 
-                catch (Exception ex)
+                catch
                 {
-                    MessageBox.Show(ex.Message);
+                    
                 }
 
 
@@ -132,9 +131,9 @@ namespace TeNDA_Inventory_Management_System
                 populate();
 
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+               
             }
         }
 
